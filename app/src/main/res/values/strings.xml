@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">What to cook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">Sign In</string>
+    <string name="login">Login</string>
+    <string name="registation">REGISTATION</string>
+    <string name="sign_up">Sign up</string>
+</resources>
