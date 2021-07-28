@@ -1,14 +1,14 @@
 @file:Suppress("DEPRECATION")
 
-package android_courses.whattocook.presentation.fragments
+package com.example.whattocook.presentation.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.whattocook.presentation.viewmodel.SignInViewModel
 import androidx.fragment.app.Fragment
 import com.example.whattocook.R
+import com.example.whattocook.presentation.viewmodel.SignInViewModel
 
 class SignInFragment : Fragment(){
     private val viewModel: SignInViewModel by lazy {

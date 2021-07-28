@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue">
+    android:background="@color/blue"
+    android:tag="fragment_sign_up"
+    android:id="@+id/tvSignUp">
 
     <!-- TODO use resorces for text, color, margin -->
     <TextView
@@ -49,11 +51,12 @@
         app:layout_constraintTop_toBottomOf="@+id/edtEmail"/>
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
-        android:text="@string/sign_up"
         android:backgroundTint="@drawable/sign_inn"
+        android:text="@string/sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
