@@ -1,4 +1,4 @@
-package com.example.whattocook.presentation
+package com.example.whattocook.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
