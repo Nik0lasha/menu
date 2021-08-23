@@ -30,10 +30,10 @@ class SignUpViewModel(private val context: Context) : View.OnClickListener{
 
     fun onViewCreated(view: View) {
         editTextEmail = view.findViewById(R.id.edtEmail)
-        editTextPassword = view.findViewById(R.id.edtPassword)
+        editTextPassword = view.findViewById(R.id.editTextPassword)
         progressBar = view.findViewById(R.id.progressbar)
         buttonSignUp = view.findViewById(R.id.btnLogin)
-        textViewLogin = view.findViewById(R.id.tvLogin)
+        textViewLogin = view.findViewById(R.id.textViewLogin)
         buttonSignUp.setOnClickListener(this)
         textViewLogin.setOnClickListener(this)
 
@@ -73,7 +73,7 @@ class SignUpViewModel(private val context: Context) : View.OnClickListener{
                         putBoolean(IS_REGISTERED, true)
                         apply()
                     }
-                    (context as BaseActivity).fragmentRouter.openNewsFragment()
+                    (context as BaseActivity).fragmentRouter.openMenuFragment()
                 } else {
                     if (task.exception is FirebaseAuthUserCollisionException) {
                         Toast.makeText(
@@ -94,7 +94,7 @@ class SignUpViewModel(private val context: Context) : View.OnClickListener{
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.buttonSignUp -> registerUser()
+            R.id.buttonSignUp-> registerUser()
             R.id.textViewLogin -> {
                 (context as BaseActivity).supportFragmentManager.popBackStack()
             }

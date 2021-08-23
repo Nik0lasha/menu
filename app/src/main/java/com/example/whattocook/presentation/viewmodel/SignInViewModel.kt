@@ -5,10 +5,10 @@ import android.content.SharedPreferences
 import android.util.Patterns
 import android.view.View
 import android.widget.*
-
 import androidx.appcompat.widget.AppCompatImageView
 import com.example.whattocook.R
 import com.example.whattocook.Utill.Constants
+import com.example.whattocook.Utill.Constants.Companion.IS_REGISTERED
 import com.example.whattocook.Utill.isVisible
 import com.example.whattocook.base.BaseActivity
 import com.example.whattocook.custom.CustomEditTextView
@@ -29,7 +29,7 @@ class SignInViewModel(private val context: Context) : View.OnClickListener{
 
     fun onViewCreated(view: View) {
         editTextEmail = view.findViewById(R.id.edtEmail)
-        editTextPassword = view.findViewById(R.id.edtPassword)
+        editTextPassword = view.findViewById(R.id.editTextPassword)
         progressBar = view.findViewById(R.id.progressbar)
         textViewSignUp = view.findViewById(R.id.tvSignIn)
         buttonLogin = view.findViewById(R.id.btnLogin)
@@ -46,7 +46,7 @@ class SignInViewModel(private val context: Context) : View.OnClickListener{
                 putBoolean(IS_REGISTERED, true)
                 apply()
             }
-            (context as BaseActivity).fragmentRouter.openNewsFragment()
+            (context as BaseActivity).fragmentRouter.openMenuFragment()
         }
     }
 
@@ -82,7 +82,7 @@ class SignInViewModel(private val context: Context) : View.OnClickListener{
                         putBoolean(IS_REGISTERED, true)
                         apply()
                     }
-                    (context as BaseActivity).fragmentRouter.openNewsFragment()
+                    (context as BaseActivity).fragmentRouter.openMenuFragment()
                 } else {
                     Toast.makeText(
                         context,

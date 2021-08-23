@@ -44,12 +44,12 @@ class CustomEditTextView @JvmOverloads constructor(
     }
 
     init {
-        View.inflate(context, layout.custom_edit_text_view, this)
+        View.inflate(context, R.layout.custom_edit_text_view, this)
 
-        with (context.theme.obtainStyledAttributes(attrs, styleable.CustomEditTextView, 0, 0)) {
-            hint = getString(styleable.CustomEditTextView_editHint) ?: ""
-            text = getString(styleable.CustomEditTextView_getText) ?: ""
-            searchImg = getResourceId(styleable.CustomEditTextView_img, R.drawable.ic_baseline_youtube_searched_for_24)
+        with (context.theme.obtainStyledAttributes(attrs,R.styleable.CustomEditTextView, 0, 0)) {
+            hint = getString(R.styleable.CustomEditTextView_editHint) ?: ""
+            text = getString(R.styleable.CustomEditTextView_getText) ?: ""
+            searchImg = getResourceId(R.styleable.CustomEditTextView_img, R.drawable.ic_baseline_youtube_searched_for_24)
         }
     }
 }

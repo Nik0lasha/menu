@@ -2,13 +2,11 @@ package com.example.whattocook.base
 
 import android_courses.whattocook.presentation.fragments.SignInFragment
 import android_courses.whattocook.presentation.fragments.SignUpFragment
-import android_courses.whattocook.presentation.fragments.FragmentSetting
-import android_courses.whattocook.presentation.fragments.SelectionFragment
-import android_courses.whattocook.presentation.fragments.SplashScreenFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.whattocook.R
 import com.example.whattocook.presentation.fragments.MenuFragment
+import com.example.whattocook.presentation.fragments.SplashScreenFragment
 
 class FragmentRouter(private val containerId: Int, private val fragmentManager: FragmentManager)
     : Router {
@@ -33,15 +31,6 @@ class FragmentRouter(private val containerId: Int, private val fragmentManager: 
         replaceFragment(SignInFragment())
     }
 
-    override fun openSettingsFragment() {
-        addFragmentWithAnimation(FragmentSetting(),
-              R.animator.slide_out_right,
-              R.animator.slide_out_left)
-    }
-
-    override fun openSelectionFragment() {
-        addFragmentWithAnimation(SelectionFragment())
-    }
 
     override fun openSignUpFragment() {
         addFragmentWithAnimation(SignUpFragment())
@@ -50,7 +39,85 @@ class FragmentRouter(private val containerId: Int, private val fragmentManager: 
         replaceFragment(SplashScreenFragment())
     }
 
-    override fun openMenuFragment() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       override fun openMenuFragment() {
         replaceFragment(MenuFragment())
     }
 }
