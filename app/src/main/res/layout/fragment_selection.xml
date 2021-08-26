@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    android:backgroundTint="?attr/card_background"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/img_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/dimenes_20dp"
+        android:background="@drawable/style_theames"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimens_550dp"
+        android:text="@string/selection"
+        android:textColor="@color/newsWhite"
+        android:textSize="@dimen/dimens_20sp"
+        android:layout_marginTop="@dimen/dimenes_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_back_button" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/selection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:orientation="vertical">
+
+        <com.example.whattocook.custom.CustomEditTextView
+            android:id="@+id/search_by_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editHint="search by keyword"
+            app:img="@drawable/ic_baseline_youtube_searched_for_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/dimenes_20dp">
+        </com.example.whattocook.custom.CustomEditTextView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -95,7 +95,7 @@ class SignInViewModel(private val context: Context) : View.OnClickListener{
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.tvSignUp -> {
+            R.id.textViewSignup -> {
                 (context as BaseActivity).fragmentRouter.openSignUpFragment()
             }
             R.id.btnLogin -> userLogin()

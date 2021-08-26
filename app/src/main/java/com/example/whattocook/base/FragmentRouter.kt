@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.whattocook.R
 import com.example.whattocook.presentation.fragments.MenuFragment
+import com.example.whattocook.presentation.fragments.SelectionFragment
 import com.example.whattocook.presentation.fragments.SplashScreenFragment
 
 class FragmentRouter(private val containerId: Int, private val fragmentManager: FragmentManager)
@@ -20,7 +21,8 @@ class FragmentRouter(private val containerId: Int, private val fragmentManager: 
     private fun addFragmentWithAnimation(
         fragment: Fragment,
         anim_open: Int = R.animator.slide_in_left,
-        anim_close: Int = R.animator.slide_in_right) {
+        anim_close: Int = R.animator.slide_in_right
+    ) {
         fragmentManager.beginTransaction().apply {
             setCustomAnimations(anim_open, anim_close, anim_open, anim_close)
             add(containerId, fragment).addToBackStack(null).commit()
@@ -32,92 +34,22 @@ class FragmentRouter(private val containerId: Int, private val fragmentManager: 
     }
 
 
-    override fun openSignUpFragment() {
-        addFragmentWithAnimation(SignUpFragment())
+    override fun openSelectionFragment() {
+        addFragmentWithAnimation(SelectionFragment())
     }
+
     override fun openSplashFragment() {
         replaceFragment(SplashScreenFragment())
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       override fun openMenuFragment() {
+    override fun openSignUpFragment() {
+        addFragmentWithAnimation(SignUpFragment())
+    }
+
+    override fun openMenuFragment() {
         replaceFragment(MenuFragment())
     }
+
 }
