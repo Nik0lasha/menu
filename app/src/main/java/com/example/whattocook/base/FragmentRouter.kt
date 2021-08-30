@@ -1,12 +1,12 @@
 package com.example.whattocook.base
 
-import android_courses.whattocook.presentation.fragments.SignInFragment
 import android_courses.whattocook.presentation.fragments.SignUpFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.whattocook.R
 import com.example.whattocook.presentation.fragments.MenuFragment
 import com.example.whattocook.presentation.fragments.SelectionFragment
+import com.example.whattocook.presentation.fragments.SignInFragment
 import com.example.whattocook.presentation.fragments.SplashScreenFragment
 
 class FragmentRouter(private val containerId: Int, private val fragmentManager: FragmentManager)

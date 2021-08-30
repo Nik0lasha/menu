@@ -28,10 +28,10 @@ class SignInViewModel(private val context: Context) : View.OnClickListener{
     private lateinit var buttonLogin: Button
 
     fun onViewCreated(view: View) {
-        editTextEmail = view.findViewById(R.id.edtEmail)
+        editTextEmail = view.findViewById(R.id.editTextEmail)
         editTextPassword = view.findViewById(R.id.editTextPassword)
         progressBar = view.findViewById(R.id.progressbar)
-        textViewSignUp = view.findViewById(R.id.tvSignIn)
+        textViewSignUp = view.findViewById(R.id.textViewSignup)
         buttonLogin = view.findViewById(R.id.btnLogin)
         textViewSignUp.setOnClickListener(this)
         buttonLogin.setOnClickListener(this)
