@@ -11,7 +11,7 @@ fun ImageView.loadFromUrl(url: String?) {
 
     Glide.with(this)
             .load(url)
-            .error (R.drawable.placeholder)
+            .error (R.drawable.placeholder1)
             .into(iv_article_image)
 }
 

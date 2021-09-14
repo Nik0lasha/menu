@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class MenuViewModel(private val newsRepository: MenuRepository) : ViewModel() {
 
-    val breakingNewsListLiveData: MutableLiveData<List<Article>> = MutableLiveData()
+    val breakingMenuListLiveData: MutableLiveData<List<Article>> = MutableLiveData()
     val errorStateLiveData: MutableLiveData<String> = MutableLiveData()
     val loadingMutableLiveData: MutableLiveData<Boolean> = MutableLiveData()
 
@@ -24,7 +24,7 @@ class MenuViewModel(private val newsRepository: MenuRepository) : ViewModel() {
             errorStateLiveData.postValue("Error")
             return@launch
         }
-        breakingNewsListLiveData.postValue(body!!.articles)
+        breakingMenuListLiveData.postValue(body!!.articles)
     }
 
     fun getNewsByKeyWord(keyWord: String) = viewModelScope.launch {
@@ -37,6 +37,6 @@ class MenuViewModel(private val newsRepository: MenuRepository) : ViewModel() {
             errorStateLiveData.postValue("Error")
             return@launch
         }
-        breakingNewsListLiveData.postValue(body!!.articles)
+        breakingMenuListLiveData.postValue(body!!.articles)
     }
 }

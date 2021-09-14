@@ -1,6 +1,5 @@
 package com.example.whattocook
 
-
 import android.os.Bundle
 import androidx.appcompat.widget.SwitchCompat
 import com.example.whattocook.base.BaseActivity
@@ -14,13 +13,8 @@ class MainActivity : BaseActivity(R.id.container), RestartInterface {
     private var switchCompat: SwitchCompat? = null
     private lateinit var saveData: SaveData
 
+
         override fun onCreate(savedInstanceState: Bundle?) {
-            //Share preference states look
-            saveData = SaveData(this)
-            if (saveData.loadLightModeState() == true) {
-                setTheme(R.style.darkTheme)
-            } else
-                setTheme(R.style.AppTheme)
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 

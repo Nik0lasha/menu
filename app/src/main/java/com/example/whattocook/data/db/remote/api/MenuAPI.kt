@@ -8,7 +8,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface NewsAPI {
+interface MenuAPI {
     @GET("v2/top-headlines")
     suspend fun getMenu(
             @Query("country")

@@ -29,10 +29,10 @@ class SignUpViewModel(private val context: Context) : View.OnClickListener{
     private lateinit var textViewLogin: TextView
 
     fun onViewCreated(view: View) {
-        editTextEmail = view.findViewById(R.id.edtEmail)
+        editTextEmail = view.findViewById(R.id.editTextEmail)
         editTextPassword = view.findViewById(R.id.editTextPassword)
         progressBar = view.findViewById(R.id.progressbar)
-        buttonSignUp = view.findViewById(R.id.btnLogin)
+        buttonSignUp = view.findViewById(R.id.buttonSignUp)
         textViewLogin = view.findViewById(R.id.textViewLogin)
         buttonSignUp.setOnClickListener(this)
         textViewLogin.setOnClickListener(this)
@@ -77,15 +77,15 @@ class SignUpViewModel(private val context: Context) : View.OnClickListener{
                 } else {
                     if (task.exception is FirebaseAuthUserCollisionException) {
                         Toast.makeText(
-                                context,
-                                "You are already registered",
-                                Toast.LENGTH_SHORT
+                            context,
+                            "You are already registered",
+                            Toast.LENGTH_SHORT
                         ).show()
                     } else {
                         Toast.makeText(
-                                context,
-                                task.exception!!.message,
-                                Toast.LENGTH_SHORT
+                            context,
+                            task.exception!!.message,
+                            Toast.LENGTH_SHORT
                         ).show()
                     }
                 }
@@ -94,7 +94,7 @@ class SignUpViewModel(private val context: Context) : View.OnClickListener{
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.buttonSignUp-> registerUser()
+            R.id.buttonSignUp -> registerUser()
             R.id.textViewLogin -> {
                 (context as BaseActivity).supportFragmentManager.popBackStack()
             }

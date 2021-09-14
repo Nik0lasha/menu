@@ -32,7 +32,7 @@ class SignInViewModel(private val context: Context) : View.OnClickListener{
         editTextPassword = view.findViewById(R.id.editTextPassword)
         progressBar = view.findViewById(R.id.progressbar)
         textViewSignUp = view.findViewById(R.id.textViewSignup)
-        buttonLogin = view.findViewById(R.id.btnLogin)
+        buttonLogin = view.findViewById(R.id.buttonLogin)
         textViewSignUp.setOnClickListener(this)
         buttonLogin.setOnClickListener(this)
 
@@ -98,7 +98,7 @@ class SignInViewModel(private val context: Context) : View.OnClickListener{
             R.id.textViewSignup -> {
                 (context as BaseActivity).fragmentRouter.openSignUpFragment()
             }
-            R.id.btnLogin -> userLogin()
+            R.id.buttonLogin -> userLogin()
         }
     }
 }
